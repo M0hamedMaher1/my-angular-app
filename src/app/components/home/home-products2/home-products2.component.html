@@ -1,0 +1,44 @@
+<!-- Home-Products2 Build -->
+<section class="products">
+    <div class="container">
+        <div class="top-title">
+            <h3>featured products</h3>
+        </div>
+        <div class="products-row">
+            @for(item of products.products(); track trackFn(item)){
+                <div class="card">
+                <div class="image">
+                    @if(products.loading()){
+                        <div class="loading">
+                        <div class="spinner"></div>
+                    </div>
+                    }@else{
+                        <img [src]="item.image" alt="">
+                        <div class="icons">
+                            <div class="icon" (click)="addToCart(item)"><i class="fa-solid fa-bag-shopping"></i></div>
+                            <div class="icon"><i class="fa-solid fa-signal"></i></div>
+                        </div>
+                        <button (click)="moreDetails(item)">quick view</button>
+                    }
+                </div>
+                <div class="card-body">
+                    <div class="top-body">
+                        <h3>{{item.title | titlecase}}</h3>
+                        <i class="fa-regular fa-heart"></i>
+                    </div>
+                    <div class="mid-stars">
+                        <div class="star"><i class="fa-solid fa-star"></i></div>
+                        <div class="star"><i class="fa-solid fa-star"></i></div>
+                        <div class="star"><i class="fa-solid fa-star"></i></div>
+                        <div class="star"><i class="fa-solid fa-star"></i></div>
+                        <div class="star"><i class="fa-solid fa-star"></i></div>
+                    </div>
+                    <div class="prices">
+                        <span>{{item.price | currency:'EGP':'symbol-narrow'}}</span>
+                    </div>
+                </div>
+            </div>
+            }
+        </div>
+    </div>
+</section>

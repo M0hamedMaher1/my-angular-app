@@ -1,0 +1,163 @@
+/* LogIn Styles */
+
+h2{
+    padding: 50px 0;
+    background-color: #f1f1f1;
+    text-align: center;
+    font-size: 25px;
+    font-weight: 600;
+    text-transform: capitalize;
+    color: #333;
+}
+
+.login{
+    padding: 40px 0 50px;
+}
+
+.login-content{
+    width: 50%;
+    margin: 0 auto;
+}
+
+.login-content h3{
+    font-size: 20px;
+    font-weight: 500;
+    color: #333;
+    text-transform: capitalize;
+}
+
+.login-content h4{
+    font-size: 15px;
+    font-weight: 500;
+    color: gray;
+    text-transform: capitalize;
+    margin: 20px 0;
+}
+
+.inputs-row{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.inputs{
+    width: 100%;
+}
+
+.inputs label{
+    font-size: 14px;
+    font-weight: 400;
+    color: #333;
+    text-transform: capitalize;
+    margin-bottom: 5px;
+    display: inline-block;
+}
+
+.inputs label span{
+    color: red;
+}
+
+.inputs input{
+    width: 100%;
+    padding: 15px;
+    border: 1px solid rgba(0,0,0,0.1);
+    outline: none;
+    background-color: #fff;
+    color: var(--textColor);
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.show{
+    width: 100%;
+    position: relative;
+}
+
+.show i{
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background-color: #fff;
+    color: #333;
+    font-size: 15px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.4s ease-in-out;
+}
+
+.show i:hover{
+    background-color: #f1f1f1;
+}
+
+a{
+    margin: 20px 0;
+    font-size: 14px;
+    font-weight: 500;
+    color: black;
+    text-transform: capitalize;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.buttons{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.buttons button{
+    width: 100%;
+    padding: 20px 0;
+    background-color: var(--mainColor);
+    color: white;
+    font-size: 13px;
+    font-weight: 600;
+    text-transform: uppercase;
+    cursor: pointer;
+    border: none;
+}
+
+p{
+    margin-top: 15px;
+    font-size: 12px;
+    font-weight: 500;
+    color: red;
+    text-transform: capitalize;
+    user-select: none;
+    font-style: italic;
+}
+
+.validators{
+    padding: 5px 0;
+}
+
+.validators span{
+    font-size: 12px;
+    font-weight: 500;
+    color: red;
+    text-transform: capitalize;
+}
+
+@media screen and (max-width:650px){
+    .login-content{
+        width: 100%;
+    }
+
+    h2{
+        font-size: 20px;
+    }
+
+    .login-content h3{
+        font-size: 14px;
+    }
+
+    .login-content h4{
+        font-size: 13px;
+    }
+}

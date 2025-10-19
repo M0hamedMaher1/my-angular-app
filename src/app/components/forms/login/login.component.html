@@ -1,0 +1,51 @@
+<!-- LogIn Build -->
+<section>
+    <h2>customer login</h2>
+    <section class="login">
+        <div class="container">
+            <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+                <div class="login-content">
+                <h3>Registered Customers</h3>
+                <h4>If you have an account, sign in with your email address.</h4>
+                <div class="inputs-row">
+                    <div class="inputs">
+                        <label for="email">email <span>*</span></label>
+                        <input type="email" formControlName="email" id="email">
+                        @if(loginForm.controls.email.invalid && loginForm.controls.email.touched){
+                            <div class="validators">
+                                @if(loginForm.controls.email.errors?.['required']){
+                                    <span>email is required!</span>
+                                }@else if(loginForm.controls.email.errors?.['email']){
+                                    <span>invalid email format!</span>
+                                }
+                            </div>
+                        }
+                    </div>
+                    <div class="inputs">
+                        <label for="password">password <span>*</span></label>
+                        <div class="show">
+                            <input [type]="text2" formControlName="password" id="password">
+                            <i class="fa-solid" (click)="toggle()" [ngClass]="show === false? 'fa-eye':'fa-eye-slash'"></i>
+                        </div>
+                        @if(loginForm.controls.password.invalid && loginForm.controls.password.touched){
+                            <div class="validators">
+                                @if(loginForm.controls.password.errors?.['required']){
+                                <span>password is required!</span>
+                                }@else if(loginForm.controls.password.errors?.['minlength']){
+                                    <span>must be at least 6 characters!</span>
+                                }
+                            </div>
+                        }
+                    </div>
+                </div>
+                <a href="#">forgot your password ?</a>
+                <div class="buttons">
+                    <button type="submit" [ngStyle]="{'cursor': loginForm.invalid? 'no-drop': 'pointer'}">sign in</button>
+                    <button type="button">create account</button>
+                </div>
+                <p>* required fields</p>
+            </div>
+            </form>
+        </div>
+    </section>
+</section>

@@ -1,0 +1,363 @@
+/* Footer Styles */
+
+.top-footer{
+    padding: 30px 0;
+    border-top: 1px solid rgba(0,0,0,0.1);
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+
+.top-row{
+    display: flex;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.card{
+    width: calc((100% - 50px) / 3);
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+}
+
+.card i{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: #f1f1f1;
+    color: #333;
+    font-size: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.right{
+    width: calc(100% - (80px + 10px));
+}
+
+.top-right{
+    line-height: 1.3;
+}
+
+.top-right h3{
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.top-right h4{
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--textColor);
+    text-transform: capitalize;
+}
+
+.right p{
+    font-size: 13px;
+    font-weight: 400;
+    color: #333;
+    line-height: 1.8;
+    margin-top: 10px;
+}
+
+.mid-footer{
+    padding: 40px 0 50px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.title{
+    font-size: 16px;
+    font-weight: 600;
+    color: #333;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+}
+
+.rows{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.address{
+    line-height: 1.4;
+}
+
+.address h4{
+    font-size: 13px;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+.address p{
+    font-size: 12px;
+    font-weight: 500;
+    color: #a8a8a8;
+}
+
+.social-icons{
+    display: flex;
+    gap: 7px;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.icon{
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background-color: #f1f1f1;
+    color: #333;
+    font-size: 14px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    transition: all 0.4s ease-in-out;
+}
+
+.icon:hover{
+    color: white;
+}
+
+.icon:nth-child(1):hover{
+    background-color: #08c;
+}
+
+.icon.icon:nth-child(2):hover{
+    background-color: brown;
+}
+
+.icon.icon:nth-child(3):hover{
+    background-color: #09c;
+}
+
+.icon::before{
+    content: '';
+    border-width: 6px;
+    border-style: solid;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.icon::after{
+    font-size: 10px;
+    font-weight: 500;
+    color: white;
+    text-transform: capitalize;
+    padding: 5px 10px;
+    letter-spacing: 0.4px;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, calc(-100% + -5px));
+}
+
+.icon:nth-child(1)::before{
+    border-color: #08c transparent transparent transparent;
+}
+
+.icon:nth-child(2)::before{
+    border-color: brown transparent transparent transparent;
+}
+
+.icon:nth-child(3)::before{
+    border-color: #09c transparent transparent transparent;
+}
+
+.icon:nth-child(1)::after{
+    content: 'facebook';
+    background-color: #08c;
+}
+
+.icon:nth-child(2)::after{
+    content: 'instagram';
+    background-color: brown;
+}
+
+.icon:nth-child(3)::after{
+    content: 'twitter';
+    background-color: #09c;
+}
+
+.icon::before, .icon::after{
+    opacity: 0;
+    transition: all 0.4s ease-in-out;
+}
+
+.icon:hover::before, .icon:hover::after{
+    opacity: 1;
+}
+
+.right-mid{
+    width: 75%;
+}
+
+.sub{
+    padding-bottom: 30px;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+    display: flex;
+    gap: 35px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.left-sub, .right-inputs{
+    width: calc((100% - 35px) / 2);
+}
+
+.left-sub p{
+    font-size: 12px;
+    font-weight: 500;
+    color: #a8a8a8;
+    line-height: 1.6;
+}
+
+.right-inputs{
+    position: relative;
+}
+
+.right-inputs input{
+    width: 100%;
+    padding: 15px 120px 15px 25px;
+    border-radius: 35px;
+    border: none;
+    outline: none;
+    background-color: #f1f1f1;
+    color: #a8a8a8;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.right-inputs input::placeholder{
+    font-size: 13px;
+    font-weight: 500;
+    color: #a8a8a8;
+    text-transform: capitalize;
+}
+
+.right-inputs button{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 120px;
+    height: 100%;
+    border: none;
+    border-top-right-radius: 35px;
+    border-bottom-right-radius: 35px;
+    background-color: var(--mainColor);
+    color: white;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.bot{
+    padding-top: 30px;
+    display: flex;
+    gap: 80px;
+    flex-wrap: wrap;
+}
+
+.both{
+    width: calc((100% - 80px) / 2);
+}
+
+.both-row{
+    display: flex;
+    justify-content: space-between;
+}
+
+.both-row ul{
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    list-style-type: none;
+}
+
+.both-row ul li a{
+    font-size: 12px;
+    font-weight: 500;
+    color: #a8a8a8;
+    text-transform: capitalize;
+    text-decoration: none;
+}
+
+.last-footer{
+    padding: 20px 0 40px;
+    border-top: 1px solid rgba(0,0,0,0.1);
+}
+
+.last-row{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.last-row p{
+    font-size: 12px;
+    font-weight: 500;
+    color: #a8a8a8;
+}
+
+.last-row img{
+    width: 230px;
+    display: block;
+    image-rendering: pixelated;
+}
+
+@media screen and (max-width:1000px){
+    .mid-footer{
+        gap: 30px;
+    }
+    .mid-footer :is(.left-mid, .right-mid){
+        width: 100%;
+    }
+}
+
+@media screen and (max-width:900px){
+    .card{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width:850px){
+    .bot{
+        gap: 20px;
+    }
+    .both{
+        width: 100%;
+    }
+    .both-row{
+        gap: 30px;
+        justify-content: flex-start;
+    }
+}
+
+@media screen and (max-width:600px){
+    .both-row{
+        flex-direction: column;
+    }
+    .sub{
+        align-items: start;
+    }
+    .left-sub, .right-inputs{
+        width: 100%;
+    }
+    .last-row{
+        flex-direction: column;
+        gap: 15px;
+    }
+}
+
+@media screen and (max-width:450px){
+    .both-row {
+        flex-direction: column;
+    }
+}

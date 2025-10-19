@@ -1,0 +1,58 @@
+/* ErrPage Styles */
+
+.error{
+    width: 100%;
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.error span{
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 15px;
+    font-weight: 500;
+    color: red;
+    text-transform: capitalize;
+}
+
+.error-content{
+    text-align: center;
+}
+
+.error-content h2{
+    font-size: 25px;
+    font-weight: 600;
+    color: #333;
+    text-transform: capitalize;
+}
+
+.error-content h3{
+    font-size: 15px;
+    font-weight: 500;
+    color: gray;
+    text-transform: capitalize;
+    margin: 20px 0;
+}
+
+.error-content button{
+    padding: 10px 20px;
+    border-radius: 25px;
+    border: 1px solid rgba(0,0,0,0.1);
+    background-color: transparent;
+    color: var(--mainColor);
+    font-size: 14px;
+    font-weight: 500;
+    text-transform: capitalize;
+    cursor: pointer;
+    transition: all 0.4s ease-in-out;
+}
+
+.error-content button:hover{
+    background-color: var(--mainColor);
+    color: white;
+}

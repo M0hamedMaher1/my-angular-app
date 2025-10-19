@@ -1,0 +1,12 @@
+/* App Styles */
+.left-margin{
+    width: calc(100% - 255px);
+    margin-left: auto;
+}
+
+@media screen and (max-width:1000px){
+    .left-margin{
+        width: 100%;
+        margin: unset;
+    }
+}

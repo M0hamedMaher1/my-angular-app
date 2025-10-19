@@ -1,0 +1,245 @@
+/* Products Styles */
+
+.products{
+    padding: 20px 0;
+}
+
+.top-title{
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+}
+
+.top-title h3{
+    font-size: 15px;
+    font-weight: 600;
+    color: #333;
+    text-transform: uppercase;
+}
+
+.products-row{
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.card{
+    width: calc((100% - 100px) / 6);
+}
+
+.image{
+    width: 100%;
+    height: 170px;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.4s ease-in-out;
+}
+
+.card:hover .image{
+    box-shadow: 0 0 12px 2px rgba(0,0,0,0.1);
+}
+
+.loading{
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0,0,0,0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.spinner{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 3px solid white;
+    border-top-color: transparent;
+    border-bottom-color: transparent;
+    animation: rotate 3s infinite linear;
+}
+
+@keyframes rotate{
+    from{
+        transform: rotate(0);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+
+.image img{
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+.img2{
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    z-index: 1;
+    transition: all 0.4s ease-in-out;
+}
+
+.image:hover .img2{
+    opacity: 1;
+}
+
+.icons{
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    z-index: 2;
+    opacity: 0;
+    transition: all 0.4s ease-in-out;
+}
+
+.card:hover .icons{
+    opacity: 1;
+}
+
+.icon{
+    width: 35px;
+    height: 35px;
+    border: 1px solid rgba(0,0,0,0.1);
+    border-radius: 50%;
+    background-color: #fff;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.4s ease-in-out;
+}
+
+.icon:hover{
+    background-color: #222529;
+    color: white;
+}
+
+.image button{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px;
+    border: none;
+    background-color: rgba(34, 37, 41, 0.4);
+    color: white;
+    font-size: 12px;
+    font-weight: 500;
+    text-transform: uppercase;
+    cursor: pointer;
+    z-index: 2;
+    opacity: 0;
+    transform: translateY(100%);
+    transition: all 0.4s ease-in-out;
+}
+
+.card:hover .image button{
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.image button:hover{
+    background-color: var(--mainColor);
+}
+
+.card-body{
+    padding: 10px 0;
+}
+
+.top-body{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.top-body h3{
+    font-size: 14px;
+    font-weight: 500;
+    color: #333;
+    text-transform: capitalize;
+    cursor: pointer;
+    width: 80%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.top-body i{
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.top-body i:hover{
+    animation: scale 0.7s infinite alternate;
+}
+
+@keyframes scale{
+    from{
+        transform: scale(1);
+    }
+    to{
+        transform: scale(1.2);
+    }
+}
+
+.mid-stars{
+    display: flex;
+    gap: 2px;
+    align-items: center;
+    margin: 5px 0;
+}
+
+.star{
+    font-size: 12px;
+    color: gray;
+}
+
+.prices span{
+    font-size: 15px;
+    font-weight: 500;
+    color: #333;
+}
+
+@media screen and (max-width:1150px){
+    .card{
+        width: calc((100% - 80px) / 5);
+    }
+}
+
+@media screen and (max-width: 1000px){
+    .card{
+        width: calc((100% - 60px) / 4);
+    }
+    .image{
+        height: 250px;
+    }
+}
+
+@media screen and (max-width:900px){
+    .card{
+        width: calc((100% - 40px) / 3);
+    }
+}
+
+@media screen and (max-width:700px){
+    .card{
+        width: calc((100% - 20px) / 2);
+    }
+}
+
+@media screen and (max-width:350px){
+    .card{
+        width: 100%;
+    }
+    .image{
+        height: auto;
+    }
+}

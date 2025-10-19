@@ -1,0 +1,43 @@
+<!-- Cart Build -->
+<aside class="cart" [ngClass]="cartService.cartStatus === 1? 'openCart': ''">
+    <div class="top-close">
+        <h3>shopping cart</h3>
+        <i class="fa-solid fa-xmark" (click)="closeCart()"></i>
+    </div>
+    @if(cartService.signalCart().length < 1){
+        <div class="empty">
+            <i class="fa-solid fa-cart-plus"></i>
+            <h4>your cart is empty.</h4>
+            <button>return shopping</button>
+        </div>
+    }@else{
+        <div class="cart-content">
+            <div class="cart-row">
+                @for(item of cartService.signalCart(); track item){
+                    <div class="card">
+                    <div class="left-image">
+                        <i class="fa-solid fa-xmark" (click)="removeElement($index)"></i>
+                        <img [src]="item.image" alt="">
+                    </div>
+                    <div class="right-details">
+                        <h3>{{item.title}}</h3>
+                        <div class="stars">
+                            <div class="star"><i class="fa-solid fa-star"></i></div>
+                            <div class="star"><i class="fa-solid fa-star"></i></div>
+                            <div class="star"><i class="fa-solid fa-star"></i></div>
+                            <div class="star"><i class="fa-solid fa-star"></i></div>
+                            <div class="star"><i class="fa-solid fa-star"></i></div>
+                        </div>
+                        <h4>{{item.price | currency: 'EGP': 'symbol-narrow'}}</h4>
+                        <p>quantity: {{item.quantity}}</p>
+                    </div>
+                </div>
+                }
+            </div>
+            <div class="buttons">
+                <button class="clear" (click)="clearCart()">clear cart</button>
+                <span>total: {{cartService.totalPrice() | currency: 'EGP':'symbol-narrow'}}</span>
+            </div>
+        </div>
+    }
+</aside>

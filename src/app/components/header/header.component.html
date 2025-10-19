@@ -1,0 +1,149 @@
+<!-- Header Build -->
+<header class="left-header">
+    <div class="header-content">
+        <div class="top-things">
+            <h3>usd <i class="fa-solid fa-angle-down"></i>
+                <ul>
+                    <li><a routerLink="#">EUR - Euro</a></li>
+                </ul>
+            </h3>
+            <div class="right-icons">
+                <div class="icon-status"><i class="fa-regular fa-user"></i></div>
+                <div class="icon-status"><i class="fa-regular fa-heart"></i></div>
+                <div class="icon-status" (click)="openCart()"><i class="fa-solid fa-bag-shopping" id="basket"><span>{{cartService.signalCart().length}}</span></i></div>
+            </div>
+        </div>
+        <div class="logo">
+            <i class="fa-solid fa-bars" (click)="openAside()"></i>
+            <img src="https://m2.portotheme.com/media/logo/stores/13/logo_ecomwhite_lg.png" alt="">
+        </div>
+        <div class="header-input">
+            <input type="text" placeholder="search...">
+            <div class="search"><i class="fa-solid fa-magnifying-glass"></i></div>
+
+        </div>
+        <nav class="nav">
+            <ul class="mainUl">
+            <li><a routerLink="home">home</a></li>
+            <li><a routerLink="#">categories <i class="fa-solid fa-angle-right"></i></a>
+                <div class="dropDown">
+                    <div class="flex">
+                        <div class="uls">
+                            <h3>Variations 1</h3>
+                            <ul>
+                                <li><a routerLink="#">Fullwidth Banner</a></li>
+                                <li><a routerLink="#">Boxed Image Banner</a></li>
+                                <li><a routerLink="#">Boxed Slider Banner</a></li>
+                                <li><a routerLink="#">Left Sidebar</a></li>
+                                <li><a routerLink="#">Right Sidebar</a></li>
+                                <li><a routerLink="#">Product Flex Grid</a></li>
+                                <li><a routerLink="#">Product List Item Types</a></li>
+                            </ul>
+                        </div>
+                        <div class="uls">
+                            <h3>Variations 2</h3>
+                            <ul>
+                                <li><a routerLink="#" class="new">Ajax Infinite Scroll</a></li>
+                                <li><a routerLink="#">3 Columns Products</a></li>
+                                <li><a routerLink="#">4 Columns Products</a></li>
+                                <li><a routerLink="#">5 Columns Products</a></li>
+                                <li><a routerLink="#">6 Columns Products</a></li>
+                                <li><a routerLink="#">7 Columns Products</a></li>
+                                <li><a routerLink="#">8 Columns Products</a></li>
+                            </ul>
+                        </div>
+                        <div class="right-image"></div>
+                    </div>
+                </div>
+            </li>
+            <li><a routerLink="products">products <i class="fa-solid fa-angle-right"></i></a>
+                <div class="dropDown">
+                    <div class="flex">
+                        <div class="uls">
+                            <h3>Product Pages</h3>
+                            <ul>
+                                <li><a routerLink="#">Simple Product</a></li>
+                                <li><a routerLink="#">Configurable Product</a></li>
+                                <li><a routerLink="#">Bundle Product</a></li>
+                                <li><a routerLink="#">Grouped Product</a></li>
+                                <li><a routerLink="#">Downloadable Product</a></li>
+                                <li><a routerLink="#">Addtocart Sticky</a></li>
+                                <li><a routerLink="#">Vertical Tabs</a></li>
+                                <li><a routerLink="#">Accordion Tabs</a></li>
+                                <li><a routerLink="#">Sticky Tabs</a></li>
+                            </ul>
+                        </div>
+                        <div class="uls">
+                            <h3>Product Layout</h3>
+                            <ul>
+                                <li><a routerLink="#">Default Layout</a></li>
+                                <li><a routerLink="#" class="new">Extended Layout</a></li>
+                                <li><a routerLink="#" class="new">Full Width Layout</a></li>
+                                <li><a routerLink="#" class="new">Grid Images Layout</a></li>
+                                <li><a routerLink="#" class="new">Sticky Right Side Info</a></li>
+                                <li><a routerLink="#" class="new">Vertical Layout</a></li>
+                                <li><a routerLink="#">With Sidebar</a></li>
+                                <li><a routerLink="#">Without Sidebar</a></li>
+                            </ul>
+                        </div>
+                        <div class="right-image2"></div>
+                    </div>
+                </div>
+            </li>
+            <li><a routerLink="#">pages <i class="fa-solid fa-angle-right"></i></a>
+                <ul class="dropDown2">
+                    <li><a routerLink="#">About Us</a></li>
+                    <li><a routerLink="#">Contact Us</a></li>
+                    <li><a routerLink="#">Blog</a></li>
+                    <li><a routerLink="#">Post</a></li>
+                    <li><a routerLink="#">Shopping Cart</a></li>
+                    <li><a routerLink="#">Checkout</a></li>
+                    <li><a routerLink="#">My Account</a></li>
+                </ul>
+            </li>
+            <li><a routerLink="#">features <i class="fa-solid fa-angle-right"></i></a>
+                <ul class="dropDown2">
+                    <li><a routerLink="#">Header Types</a></li>
+                    <li><a routerLink="#">Footer Types</a></li>
+                </ul>
+            </li>
+            <li><a routerLink="#">blog</a></li>
+            <li><a routerLink="#">contact us</a></li>
+            <li><a routerLink="forms" (click)="logout()">{{text}}</a></li>
+        </ul>
+        </nav>
+        <div class="callUs">
+            <h3>CALL US NOW</h3>
+            <h4>+123 456 7890</h4>
+        </div>
+        <div class="icons">
+            <div class="icon"><i class="fa-brands fa-facebook-f"></i></div>
+            <div class="icon"><i class="fa-brands fa-instagram"></i></div>
+            <div class="icon"><i class="fa-brands fa-twitter"></i></div>
+        </div>
+        <div class="icon-resp">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <i class="fa-solid fa-bag-shopping" id="basket" (click)="openCart()"><span>{{cartService.signalCart().length}}</span></i>
+        </div>
+    </div>
+</header>
+<aside class="aside" [ngClass]="aside === 1? 'openAside': ''">
+    <div class="close" (click)="closeAside()">
+        <i class="fa-solid fa-xmark"></i>
+    </div>
+    <div class="top-buttons">
+        <button><i class="fa-solid fa-bars"></i> menu</button>
+        <button>account</button>
+        <button>settings</button>
+    </div>
+    <ul class="aside-ul">
+        <li><a routerLink="home">home</a></li>
+        <li><a routerLink="#">categories</a></li>
+        <li><a routerLink="products">products</a></li>
+        <li><a routerLink="#">pages</a></li>
+        <li><a routerLink="#">features</a></li>
+        <li><a routerLink="#">blog</a></li>
+        <li><a routerLink="#">about us</a></li>
+        <li><a routerLink="forms" (click)="logout()">{{text}}</a></li>
+    </ul>
+</aside>

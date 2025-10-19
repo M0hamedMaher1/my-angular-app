@@ -1,0 +1,59 @@
+<!-- MoreDetails Build -->
+<section class="details">
+    <div class="container">
+        <h3><i class="fa-regular fa-home"></i><i class="fa-solid fa-angle-right"></i> {{moreDetails.product.title}}</h3>
+        <div class="details-row">
+            <div class="left-image">
+                @if(moreDetails.loading()){
+                    <div class="loading">
+                        <div class="spinner"></div>
+                    </div>
+                }@else{
+                    <img [src]="moreDetails.product.image" alt="">
+                }
+            </div>
+            <div class="right-details">
+                <div class="top">
+                    <h3>{{moreDetails.product.title}}</h3>
+                    <div class="right-icons">
+                        <i class="fa-solid fa-angle-left"></i>
+                        <i class="fa-solid fa-angle-right"></i>
+                    </div>
+                </div>
+                <div class="stars">
+                    <div class="star"><i class="fa-solid fa-star"></i></div>
+                    <div class="star"><i class="fa-solid fa-star"></i></div>
+                    <div class="star"><i class="fa-solid fa-star"></i></div>
+                    <div class="star"><i class="fa-solid fa-star"></i></div>
+                    <div class="star"><i class="fa-solid fa-star"></i></div>
+                    <a href="#">Be the first to review this product</a>
+                </div>
+                <h4 class="price">{{moreDetails.product.price | currency: 'EGP':'symbol-narrow'}}</h4>
+                <p>
+                    {{moreDetails.product.description}}
+                </p>
+                <div class="avail">
+                    <h5>Availability: <span>In stock</span></h5>
+                    <h5>SKU: A24234234</h5>                
+                </div>
+                <div class="payments">
+                    <div class="left-count">
+                        <button>-</button>
+                        <input type="text" value="1">
+                        <button>+</button>
+                    </div>
+                    <button class="addToCart"><i class="fa-solid fa-bag-shopping"></i> add to cart</button>
+                    <div class="right-icons2">
+                        <div class="icon"><i class="fa-regular fa-heart"></i></div>
+                        <div class="icon"><i class="fa-solid fa-signal"></i></div>
+                    </div>
+                </div>
+                <div class="social-icons">
+                    <div class="social"><i class="fa-brands fa-facebook-f"></i></div>
+                    <div class="social"><i class="fa-brands fa-twitter"></i></div>
+                    <div class="social"><i class="fa-brands fa-instagram"></i></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
